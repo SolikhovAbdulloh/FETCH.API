@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4c4c;
+        }
+
+        li button {
+            background-color: transparent;
+            color: #ff6b6b;
+            cursor: pointer;
+            border: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <input type="text" id="todoInput" placeholder="New task">
+    <button id="addBtn">Add</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        // Sahifa yuklanganda local storage'dan todo'larni yuklash
+        const todoList = document.getElementById('todoList');
+        let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+        todos.forEach(todo => {
+            const li = document.createElement('li');
+            li.innerHTML = `${todo} <button>Delete</button>`;
+            todoList.appendChild(li);
+
+            // O'chirish tugmasi
+            li.querySelector('button').onclick = function() {
+                todos = todos.filter(t => t !== todo);
+                localStorage.setItem('todos', JSON.stringify(todos));
+                li.remove();  // DOM-dan olib tashlash
+            };
+        });
+
+        // Yangi todo qo'shish
+        document.getElementById('addBtn').onclick = function() {
+            const todoInput = document.getElementById('todoInput').value;
+
+            if (todoInput === '') {
+                alert('Please enter a task.');
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.innerHTML = `${todoInput} <button>Delete</button>`;
+            todoList.appendChild(li);
+
+            todos.push(todoInput);
+            localStorage.setItem('todos', JSON.stringify(todos));
+
+            // O'chirish tugmasi
+            li.querySelector('button').onclick = function() {
+                todos = todos.filter(t => t !== todoInput);
+                localStorage.setItem('todos', JSON.stringify(todos));
+                li.remove();
+            };
+
+            document.getElementById('todoInput').value = '';  // Inputni tozalash
+        };
+    </script>
+</body>
+</html>
