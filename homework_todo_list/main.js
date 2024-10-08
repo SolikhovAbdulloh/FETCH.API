@@ -30,7 +30,7 @@ const btn = document.querySelector("#btn");
 
 btn.addEventListener("click", () => {
 
-  if (input.value.trim() !== "") {
+  if (input.value !== "") {
     let li = document.createElement("li");
     li.innerHTML = input.value;
 

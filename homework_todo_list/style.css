@@ -31,7 +31,7 @@ input {
 }
 .card_in {
   width: 300px;
-  height: 35px;
+  height: 100%;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -42,6 +42,7 @@ input {
   height: 35px;
   border-radius: 12px;
   background-color: #aaaaaa;
+  color: black;
 }
 .card {
   display: flex;
