@@ -10,45 +10,59 @@ body {
   background-color: #254b76;
   margin: 0;
   padding: 20px;
-  font-family: 'Ubuntu', sans-serif;
- 
+  font-family: "Ubuntu", sans-serif;
 }
-.card{
-    width: 400px;
-    height: 400px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 12px;
-    margin: 0 auto;
-    margin-top: 20px;
+.card {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
-input{
-    width: 250px;
-    height: 32px;
-    border-radius: 12px;
-    background-color: #B1B1B166;
-    
-   
-    border: none;
+input {
+  width: 250px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #b1b1b166;
 
+  border: none;
 }
-.card_in{
-    width: 300px;
-    height: 35px;
-    border-radius: 12px;
-     display: flex;
-    align-items: center;
-    justify-content: center;
+.card_in {
+  width: 300px;
+  height: 35px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btn {
+  width: 60px;
+  height: 35px;
+  border-radius: 12px;
+  background-color: #aaaaaa;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+li {
+  width: 200px;
+  height: 30px;
+  background-color: aquamarine;
+  color: black;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 button{
-    width: 60px;
-    height: 35px;
-    border-radius: 12px;
-    background-color: #AAAAAA;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+    background-color: red;
+    color: chartreuse;
+    width: 55px;
+    height: 25px;
 }

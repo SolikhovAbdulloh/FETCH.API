@@ -24,24 +24,33 @@
 
 // To do list
 
+const input = document.querySelector("input");
+const ul = document.getElementById("ul");
+const btn = document.querySelector("#btn");
 
-const ul_ = document.getElementById('#ul')
+btn.addEventListener("click", () => {
 
-const todos = JSON.parse(localStorage.getItem('todos')) || [];
+  if (input.value.trim() !== "") {
+    let li = document.createElement("li");
+    li.innerHTML = input.value;
 
+    let dlt = document.createElement("button");
+    dlt.innerHTML = "Delete";
 
-todos.forEach(todo =>{
-    let li = document.createElement('li')
+  
+    dlt.addEventListener("click", () => {
+      ul.removeChild(li);
+    });
+
    
-    li.innerHTML = `${todo} <button>O'chirish</button>`;
+    li.appendChild(dlt);
 
-    ul_.appendChild(li);
+    ul.appendChild(li);
+
+  
+    input.value = "";
+  } else {
+ 
+    alert("Iltimos, so'z kiriting");
+  }
 });
-
-       li.querySelector('#btn').onclick = function() {
-                todos = todos.filter(t => t !== todo);
-                localStorage.setItem('todos', JSON.stringify(todos));
-                li.remove();  // DOM-dan olib tashlash
-            };
-        
-        });
