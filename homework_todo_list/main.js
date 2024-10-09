@@ -32,17 +32,17 @@ btn.addEventListener("click", () => {
 
   if (input.value !== "") {
     let li = document.createElement("li");
-    li.innerHTML = input.value;
+    li.innerHTML ='<i class="fa-solid fa-check fa-beat-fade" style="color: #63e6be;"></i>'+ input.value;
 
     let dlt = document.createElement("button");
-    dlt.innerHTML = "Delete";
+    dlt.innerHTML = "🗑️ Delete";
 
   
     dlt.addEventListener("click", () => {
       ul.removeChild(li);
     });
 
-   
+    
     li.appendChild(dlt);
 
     ul.appendChild(li);

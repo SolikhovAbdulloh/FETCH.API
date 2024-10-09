@@ -53,17 +53,23 @@ input {
 li {
   width: 200px;
   height: 30px;
-  background-color: aquamarine;
+  background-color: #aaaaaa;
   color: black;
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
   
 }
 button{
     background-color: red;
-    color: chartreuse;
-    width: 55px;
-    height: 25px;
+    color: rgb(249, 249, 249);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
 }
