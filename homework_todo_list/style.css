@@ -36,6 +36,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 #btn {
   width: 60px;
@@ -43,6 +44,8 @@ input {
   border-radius: 12px;
   background-color: #aaaaaa;
   color: black;
+ 
+
 }
 .card {
   display: flex;

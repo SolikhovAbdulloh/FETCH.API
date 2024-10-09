@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.search-input {
+    width: 50%;
+}
+
+.groups-filter {
+    width: 100px;
+}
+
+.table {
+    background-color: white;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.open-modal-btn {
+    width: 150px;
+}
+
+.ms-3 {
+    margin-left: 1rem !important;
+    width: 10vh;
+}
+

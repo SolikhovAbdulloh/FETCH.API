@@ -35,7 +35,7 @@ btn.addEventListener("click", () => {
     li.innerHTML ='<i class="fa-solid fa-check fa-beat-fade" style="color: #63e6be;"></i>'+ input.value;
 
     let dlt = document.createElement("button");
-    dlt.innerHTML = "🗑️ Delete";
+    dlt.innerHTML = "🗑️Delete";
 
   
     dlt.addEventListener("click", () => {
