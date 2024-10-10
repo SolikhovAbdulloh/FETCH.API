@@ -1,31 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .search-input {
-    width: 50%;
+  width: 50%;
 }
 
 .groups-filter {
-    width: 100px;
+  width: 100px;
 }
 
 .table {
-    background-color: white;
+  background-color: white;
 }
 
-.table th, .table td {
-    vertical-align: middle;
-    text-align: center;
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
 }
 
 .open-modal-btn {
-    width: 150px;
+  width: 150px;
 }
 
 .ms-3 {
-    margin-left: 1rem !important;
-    width: 10vh;
+  margin-left: 1rem !important;
+  width: 10vh;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+.myTodo {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.list {
+  background-color: rgb(11, 103, 237);
+  color: #fff;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+i {
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+.error {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 5px;
+  color: red;
+  display: none;
+}

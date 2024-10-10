@@ -1,58 +1,71 @@
 let students = JSON.parse(localStorage.getItem("students")) || [];
 
-// DOM elementlar bilan ishlash
+let selectedStudentIndex = null; 
+
 const studentForm = document.getElementById("studentForm");
+
 const studentsTable = document.querySelector(".students-table tbody");
 
-// Talabalarni jadvalga qo'shish funksiyasi
+const studentModalTitle = document.getElementById("studentModalLabel");
+
+const firstNameInput = document.getElementById("firstName");
+
+const lastNameInput = document.getElementById("lastName");
+
+const groupInput = document.getElementById("group");
+
+const doesWorkInput = document.getElementById("doesWork");
+
 function displayStudents() {
-  studentsTable.innerHTML = "";
-  students.forEach((student, index) => {
-    studentsTable.innerHTML += `
+
+    studentsTable.innerHTML = "";
+
+    students.forEach((student, index) => {
+
+        studentsTable.innerHTML += `
             <tr>
                 <td>${index + 1}</td>
                 <td>${student.firstName}</td>
                 <td>${student.lastName}</td>
                 <td>${student.group}</td>
                 <td>${student.doesWork ? "Ha" : "Yo'q"}</td>
-                <td><button class="btn btn-danger" onclick="deleteStudent(${index})">O'chirish</button></td>
+                <td>
+                    <button class="btn btn-primary" onclick="editStudent(${index})">Tahrirlash</button>
+                    <button class="btn btn-danger" onclick="deleteStudent(${index})">O'chirish</button>
+                </td>
             </tr>
         `;
   });
 }
 
-// Talaba qo'shish formasi topshirilganda
 studentForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Formadagi ma'lumotlarni olish
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
-  const group = document.getElementById("group").value;
-  const doesWork = document.getElementById("doesWork").checked;
+  const firstName = firstNameInput.value;
+  const lastName = lastNameInput.value;
+  const group = groupInput.value;
+  const doesWork = doesWorkInput.checked;
 
-  // Yangi talaba obyekti
-  const newStudent = { firstName, lastName, group, doesWork };
+  const student = { firstName, lastName, group, doesWork };
 
-  // Talabani massivga qo'shish
-  students.push(newStudent);
+  if (selectedStudentIndex === null) {
+    students.push(student);
+  } else {
+    students[selectedStudentIndex] = student;
+    selectedStudentIndex = null; 
+  }
 
-  // LocalStorage-ga saqlash
   localStorage.setItem("students", JSON.stringify(students));
 
-  // Jadvalni yangilash
   displayStudents();
 
-  // Modalni yopish
   const modalElement = document.getElementById("studentModal");
   const modal = bootstrap.Modal.getInstance(modalElement);
   modal.hide();
 
-  // Formani tozalash
   studentForm.reset();
 });
 
-// Talabani o'chirish funksiyasi
 function deleteStudent(index) {
   if (confirm("Talabani o'chirmoqchimisiz?")) {
     students.splice(index, 1);
@@ -61,5 +74,19 @@ function deleteStudent(index) {
   }
 }
 
-// Dastlab jadvalni chiqarish
+function editStudent(index) {
+  selectedStudentIndex = index; 
+  const student = students[index];
+
+  firstNameInput.value = student.firstName;
+  lastNameInput.value = student.lastName;
+  groupInput.value = student.group;
+  doesWorkInput.checked = student.doesWork;
+
+  studentModalTitle.textContent = "Talabani tahrirlash";
+  const modalElement = document.getElementById("studentModal");
+  const modal = new bootstrap.Modal(modalElement);
+  modal.show();
+}
+
 window.addEventListener("DOMContentLoaded", displayStudents);
