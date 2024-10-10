@@ -74,19 +74,6 @@ function deleteStudent(index) {
   }
 }
 
-function editStudent(index) {
-  selectedStudentIndex = index; 
-  const student = students[index];
 
-  firstNameInput.value = student.firstName;
-  lastNameInput.value = student.lastName;
-  groupInput.value = student.group;
-  doesWorkInput.checked = student.doesWork;
-
-  studentModalTitle.textContent = "Talabani tahrirlash";
-  const modalElement = document.getElementById("studentModal");
-  const modal = new bootstrap.Modal(modalElement);
-  modal.show();
-}
 
 window.addEventListener("DOMContentLoaded", displayStudents);
