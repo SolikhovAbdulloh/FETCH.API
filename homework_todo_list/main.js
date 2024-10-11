@@ -92,6 +92,8 @@ const renderList = () => {
         data[index].matn = newName;
         localStorage.setItem('data',JSON.stringify(data))
         renderList();
+     ul.appendChild(times);
+
       }
     });
 
