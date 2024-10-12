@@ -1,10 +1,15 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800;900&display=swap");
+
 *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-}
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}            
+
+body{ 
+    
+    font-family: 'Raleway', sans-serif;
     margin: 0 auto;
     padding: 20px 40px; 
 }
@@ -15,24 +20,29 @@ body{
     align-items: center;
     margin-top: 30px;
     gap: 30px;
+    background-color: red;
+    padding: 10px;
 }
 button:hover{
-    background-color: rgb(208, 255, 196);
-    color: rgb(153, 53, 51);
-    border: 1px solid brown;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
     box-shadow: 2px 2px 2px  darkgreen;
 }
 button{
-    width: 100px;
+
+    font-family: 'Raleway', sans-serif;
+    width: 300px;
+    font-weight: 700;
     height: 50px;
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: red;
     border-radius: 22px;
     transition: 0.4s;
+    border: 5px solid white;
 }
 img{
-    width: 50%;
-    object-fit: cover;
+    width: 100%;
     
 }
 p{
@@ -43,21 +53,7 @@ span{
     background-color: yellow;
     color: black;
 }
-.cards{
-   width: 300px;
-   height: 300px;
-   border-radius: 12px;
-   background-color: rgba(226, 227, 227, 0.947);
-   padding: 10px;
-   text-align: center;
-   gap: 30px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
 
-
-}
 .title{
     color: rgb(255, 0, 0);
     font-size: 20px;
