@@ -4,6 +4,7 @@ const Womens = document.querySelector('#Ayollar');
 const All = document.querySelector('#All');
 const Gold = document.querySelector("#Zargarlik");
 const Texnico = document.querySelector("#Texnika");
+const likes = document.querySelector('#yurak')
 let product = [];
 
 
@@ -35,7 +36,7 @@ Womens.addEventListener('click',()=>{
 Gold.addEventListener('click', ()=>{
 
   const gold = product.filter((product) => product.category === "jewelery");
-  Ekranga(gold)
+  Ekranga(gold);
 })
 
 Texnico.addEventListener('click',()=>{
@@ -60,11 +61,17 @@ function Ekranga(product) {
     let creatediv = document.createElement("div");
     creatediv.innerHTML = `
       <div class = "cards">
-        <img src="${product.image}" alt="rasm bor" style="width: 100px; height: 100px;">
+        <img src="${product.image}" alt="rasm bor" style="width: 200px; height: 250px;">
         <p class="title">${product.title}</p>
-        <p>Price: <span>${product.price}$</span></p>
+        <p class ="price">Narxi: <span>${product.price}$   </span> <i id="yurak" class="fa-regular fa-heart "></i></p>
       </div>
     `;
     card.appendChild(creatediv);
   });
 }
+
+likes.addEventListener('click',()=>{
+  console.log('salom');
+  
+})
+

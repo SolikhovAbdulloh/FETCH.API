@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.Btn {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+  background-color: red;
+  padding: 20px;
+  border-radius: 12px;
+}
+button:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px darkgreen;
+}
+button {
+  font-family: "Raleway", sans-serif;
+  width: 300px;
+  font-weight: 700;
+  height: 50px;
+  background-color: white;
+  color: red;
+  border-radius: 22px;
+  transition: 0.4s;
+  border: 5px solid white;
+}
+img {
+  width: 100%;
+}
+p {
+  font-size: 22px;
+  color: rgb(32, 190, 32);
+}
+span {
+  background-color: yellow;
+  color: black;
+  border-radius: 12px;
+  padding: 5px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+i:active {
+  background-color: red;
+}
+.title {
+  color: rgb(255, 0, 0);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+
+#card {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 256px;
+  height: 350px;
+  justify-content: space-between;
+}
+#card div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+}
+#card div img {
+  width: 100%;
+}
