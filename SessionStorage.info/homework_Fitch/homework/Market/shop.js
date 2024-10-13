@@ -13,10 +13,8 @@ let product = [];
 
 fetch("https://fakestoreapi.com/products")
   .then((data) => data.json())
-  .then((value) => {
-    console.log(value);
-    product = value; 
-  })
+  .then((value) => { product = value; })
+
   .catch((error) => {
     console.error("Xatolik bo'ldi tekshirib ko'ring:", error);
   });
@@ -31,7 +29,7 @@ Mens.addEventListener("click", () => {
 Womens.addEventListener('click',()=>{
 
   const women = product.filter(
-    (product) => product.category === "women's clothing");
+    (product) => product.category === "women's clothing");    
     Ekranga(women)
 })
 
@@ -65,7 +63,7 @@ function Ekranga(product) {
     let creatediv = document.createElement("div");
     creatediv.innerHTML = `
       <div class = "cards">
-        <img src="${product.image}" alt="rasm bor" style="width: 200px; height: 250px;">
+        <img src="${product.image}" alt="rasm bor" style="width: 80%; display:flex; justify-content: center; align-items:center;  height: 300px;">
         <p class="title">${product.title}</p>
         <p class ="price">Narxi: <span>${product.price}$</span></p>
         <button class="savat">Savatga qo'shish</button>
