@@ -5,11 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.contiener{
+  margin: 0 auto;
+  padding: 40px 40px;
+  max-width: 1440px;
+}
 body {
   font-family: "Raleway", sans-serif;
   margin: 0 auto;
-  padding: 20px 40px;
 }
 
 .Btn {
@@ -21,6 +24,7 @@ body {
   background-color: red;
   padding: 20px;
   border-radius: 12px;
+  width: 100%;
 }
 button:hover {
   background-color: red;
@@ -58,35 +62,44 @@ span {
   align-items: center;
   gap: 30px;
 }
-i:active {
-  background-color: red;
-}
-.title {
-  color: rgb(255, 0, 0);
-  font-size: 15px;
-  font-weight: bold;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-    sans-serif;
-}
 
+.title {
+  color: black;
+  font-size: 12px;
+  font-weight:bolder;
+  font-family: "Lucida Grande", 
+}
+#savat{
+  width: 150px;
+  height: 50px;
+}
+#savat:hover{
+  background-color: gray;
+  opacity: 50%;
+  color: yellow;
+}
+.shop-icon{
+  width: 100px;
+  height: 40px;
+}
 #card {
-  display: grid;
-  grid-template-columns: repeat(5, 2fr);
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 256px;
-  height: 350px;
-  justify-content: space-between;
+ display: flex ;
+ justify-content: space-around;
+ align-items: center;
+ flex-wrap: wrap;
 }
 #card div {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  align-items: center;
   gap: 20px;
-  background-color: transparent;
+  background-color: rgba(232, 223, 223, 0.449);
+  justify-content: center; 
+  margin-top: 20px;
+  border-radius: 12px;
+  flex-wrap: wrap;
 }
-#card div img {
-  width: 100%;
+
+#card img {
+  width: 300px;
 }

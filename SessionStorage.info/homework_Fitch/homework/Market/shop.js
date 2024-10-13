@@ -4,9 +4,11 @@ const Womens = document.querySelector('#Ayollar');
 const All = document.querySelector('#All');
 const Gold = document.querySelector("#Zargarlik");
 const Texnico = document.querySelector("#Texnika");
-const likes = document.querySelector('#yurak')
-let product = [];
+let sonlar = document.querySelector(".sonlar");
+let savat = document.querySelector(".savat");
 
+let count = 0;
+let product = [];
 
 
 fetch("https://fakestoreapi.com/products")
@@ -16,7 +18,7 @@ fetch("https://fakestoreapi.com/products")
     product = value; 
   })
   .catch((error) => {
-    console.error("Xatolik:", error);
+    console.error("Xatolik bo'ldi tekshirib ko'ring:", error);
   });
 
 Mens.addEventListener("click", () => {
@@ -53,25 +55,38 @@ All.addEventListener('click',()=>{
 
   Ekranga(all)
 
-})
+});
+
+
 
 function Ekranga(product) {
-  card.innerHTML = ""; 
+  card.innerHTML = "" ; 
   product.forEach((product) => {
     let creatediv = document.createElement("div");
     creatediv.innerHTML = `
       <div class = "cards">
         <img src="${product.image}" alt="rasm bor" style="width: 200px; height: 250px;">
         <p class="title">${product.title}</p>
-        <p class ="price">Narxi: <span>${product.price}$   </span> <i id="yurak" class="fa-regular fa-heart "></i></p>
+        <p class ="price">Narxi: <span>${product.price}$</span></p>
+        <button class="savat">Savatga qo'shish</button>
+
       </div>
     `;
     card.appendChild(creatediv);
   });
+ 
 }
 
-likes.addEventListener('click',()=>{
-  console.log('salom');
+ 
+ 
   
-})
+
+card.addEventListener("click", (e) => {
+  if(e.target.classList.contains('savat')){
+
+    count++;
+    sonlar.textContent = count;
+  }
+});
+
 

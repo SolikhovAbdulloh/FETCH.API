@@ -114,3 +114,10 @@
 //   });
 
 
+// const btn = document.querySelector('#btn')
+// let count = 0;
+// const sonlar = document.querySelector('#sonlar')
+// btn.addEventListener('',()=>{
+//     count++ 
+//     sonlar.textContent = count;   
+// })
