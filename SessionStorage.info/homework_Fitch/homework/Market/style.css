@@ -14,7 +14,11 @@ body {
   font-family: "Raleway", sans-serif;
   margin: 0 auto;
 }
+.savat{
+  width: 80%;
 
+  margin: auto;
+}
 .Btn {
   justify-content: center;
   display: flex;
