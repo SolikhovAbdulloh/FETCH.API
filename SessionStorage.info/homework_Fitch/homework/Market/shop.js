@@ -8,6 +8,7 @@ let sonlar = document.querySelector(".sonlar");
 let savat = document.querySelector(".savat");
 let count = 0;
 let product = [];
+let Btn = document.querySelectorAll(".Btn");
 
 
 
@@ -20,40 +21,36 @@ fetch("https://fakestoreapi.com/products")
     console.error("Xatolik bo'ldi tekshirib ko'ring:", error);
   });
 
-let DivBtn = document.querySelector(".Btn");
 
-// DivBtn.addEventListener('click',(product)=>{
-//   if(product.target.contains('Mens')){
-//     const Erkak = product.filter((product)=>product.category === "men's clothing")
-    
-//     Ekranga(Erkak);
-//   }
-// })
+
+
+
+
 
 Mens.addEventListener("click", () => {
 
-  const Erkak = product.filter( (product) => product.category === "men's clothing");
+  const Erkak = filter(product, "men's clothing");
 
   Ekranga(Erkak); 
 });
 
 Womens.addEventListener('click',() => {
 
-  const women = product.filter((product) => product.category === "women's clothing");   
+  const women = filter(product, "women's clothing");   
 
   Ekranga(women)
 })
 
 Gold.addEventListener('click', () => {
 
-  const gold = product.filter((product) => product.category === "jewelery");
+  const gold = filter(product, "jewelery");
 
   Ekranga(gold);
 })
 
 Texnico.addEventListener('click',() => {
 
-  const texnico = product.filter((product) => product.category === 'electronics');
+  const texnico = filter(product,'electronics')
 
   Ekranga(texnico)
 
@@ -61,12 +58,15 @@ Texnico.addEventListener('click',() => {
 
 All.addEventListener('click',() => {
 
-  const all = product.filter((product)=> product)
+  const all = product.filter((product)=>product)
 
   Ekranga(all)
 
 });
 
+function filter(product, category) {
+  return product.filter((product) => product.category === category);
+}
 
 
 function Ekranga(product) {
