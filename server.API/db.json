@@ -1,0 +1,102 @@
+{
+  "Maxsulotlar": [
+    {
+      "id": "2",
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop/659bb9c23aa48.png.webp",
+      "title": " Смартфон Honor X8b 8/256GB Благородный зеленый",
+      "price": 2990000,
+      "category": "Telefon"
+    },
+    {
+      "id": "3",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/556181fa381db2a351b9c45f1b6f99232024053011474289823qUXOUpP867.png",
+      "title": "Смартфон Honor 200 Lite 5G 8/256 GB Океанический голубой",
+      "price": 3439000,
+      "category": "Telefon"
+    },
+    {
+      "id": "4",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/3ef815416f775098fe977004015c61932022043017462771255teDB2W47yv.jpg.webp",
+      "title": "Блендер Sonifer SF-8097",
+      "price": 419000,
+      "category": "uy-jihozlari"
+    },
+    {
+      "id": "5",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/19864b6d738cd1b23bf4c399d6dc59982020082023212938736aDl4U08luX.jpg.webp",
+      "title": "Мини-печь MAGNA MF-3615 (04RD)",
+      "price": 669000,
+      "category": "uy-jihozlari"
+    },
+    {
+      "id": "6",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/6ad7ceec2e305279d7b591be9b06aa0f2024011113172693274wYnsqtfeKH.png.webp",
+      "title": "  Холодильник Бирюса I960NF ",
+      "price": 5999000,
+      "category": "uy-jihozlari"
+    },
+    {
+      "id": "7",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/c81e728d9d4c2f636f067f89cc14862c2023092908430440554dKcixtCDSW.jpg.webp",
+      "title": "  Ноутбук Acer Aspire 3 A315-59 / i5-1235U / DDR4 8GB / SSD 512GB / 15.6 Pure Silver. ХИТ ПРОДАЖ!    ",
+      "price": 5199900,
+      "category": "Noutbook"
+    },
+    {
+      "id": "8",
+      "img": "https://assets.asaxiy.uz/product/items/desktop/e4da3b7fbbce2345d7772b0674a318d520230929084304407262BiEk6V60U.jpg.webp",
+      "title": " Ноутбук Acer Aspire 3 A315-59-39S9, Core i3-1215U, 8/256 Gb SSD, Full HD Silver. ХИТ ПРОДАЖ!",
+      "price": 3909000,
+      "category": "Noutbook"
+    },
+    {
+      "id": "9",
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//65dde6d35efd7.png.webp",
+      "title": "Ноутбук HP 15S-FQ5004, Core I3-1215U, DDR4 8GB, SSD 256Gb, Intel UHD Graphics 15.6 HD, Silver                 ",
+      "price": 4999000,
+      "category": "Noutbook"
+    },
+    {
+      "id": 1729031731305,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    },
+    {
+      "id": 1729032768010,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    },
+    {
+      "id": 1729033209595,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    },
+    {
+      "id": 1729033211906,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    },
+    {
+      "id": 1729033213479,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    },
+    {
+      "id": 1729033214649,
+      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
+      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
+      "price": 299999590,
+      "category": "Telefon"
+    }
+  ]
+}
