@@ -67,13 +67,18 @@ function EditPUT(id) {
     }),
   });
 }
-let count = 0;
-let savat = document.querySelector(".nol");
+
 
 APIBtn.addEventListener('click',()=>{
     
     ADDpost();
     alert('API ga malumot qoshildi !! Brauzerga refreshdan song qoshiladi')
+})
+let count = 0;
+let savat = document.querySelector(".nol");
+APIBtn2.addEventListener('click',()=>{
+  count++
+  savat.te = count
 })
 // APIBtn1.addEventListener('click',()=>{
 //     deleteData(1); 
