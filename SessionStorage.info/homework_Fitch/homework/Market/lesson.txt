@@ -18,7 +18,7 @@ fetch("https://jsonplaceholder.typicode.com/posts",{
 
 PUT - orqali biz API dagi malumotlarni ozgartira olamiz va uni "PUT" orqali bajaramiz shu misol kabi 
 
-fetch("https://jsonplaceholder.typicode.com/posts",{
+fetch"https://jsonplaceholder.typicode.com/posts",
     method:'PUT',-----                                   //PUT metodi
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
@@ -29,4 +29,5 @@ fetch("https://jsonplaceholder.typicode.com/posts",{
     })
 
 
-DELETE - Serverda mavjud resursni o'chirish uchun ishlatiladi. Masalan, foydalanuvchi hisobini yoki maqolani o'chirishda.
+DELETE - Serverda mavjud resursni o'chirish uchun ishlatiladi. 
+Masalan, foydalanuvchi hisobini yoki maqolani o'chirishda.

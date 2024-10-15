@@ -29,38 +29,36 @@ fetch("https://fakestoreapi.com/products")
 
 Mens.addEventListener("click", () => {
 
-  const Erkak = filter(product, "men's clothing");
+    
 
-  Ekranga(Erkak); 
+  Ekranga(filter(product, "men's clothing")); 
 });
 
 Womens.addEventListener('click',() => {
 
-  const women = filter(product, "women's clothing");   
+  
 
-  Ekranga(women)
+  Ekranga(filter(product, "women's clothing"));
 })
 
 Gold.addEventListener('click', () => {
 
-  const gold = filter(product, "jewelery");
+   
 
-  Ekranga(gold);
+  Ekranga(filter(product, "jewelery"));
 })
 
 Texnico.addEventListener('click',() => {
 
-  const texnico = filter(product,'electronics')
+  
 
-  Ekranga(texnico)
+  Ekranga(filter(product, "electronics"));
 
 })
 
 All.addEventListener('click',() => {
 
-  const all = product.filter((product)=>product)
-
-  Ekranga(all)
+ Ekranga(product.filter((product) => product));
 
 });
 
