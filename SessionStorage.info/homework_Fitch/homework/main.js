@@ -121,3 +121,46 @@
 //     count++ 
 //     sonlar.textContent = count;   
 // })
+
+// localStorage.setItem("student", JSON.stringify({ id: 1 }));
+// console.log(JSON.parse(localStorage.getItem("student")));
+
+// let p = []
+// const Womens = document.querySelector("#womens");
+// const filter = document.querySelector('.filter')
+
+
+// fetch("https://fakestoreapi.com/products")
+
+// .then((data)=> data.json())
+// .then((value) => {p = value;});
+ 
+
+// Womens.addEventListener('click',() => {
+//     let ayol = p.filter((e) => e.category == "women's clothing");
+//     print(ayol)
+// })
+
+// function print(products){
+//         products.forEach((products) =>{
+//         let divUp = document.createElement('div')
+//         divUp.innerHTML = `
+//          <div>
+//         <h1>${products.title}</h1>
+//         <p>${products.price}</p>
+//         <img src = "${products.image}"/>
+//        </div>
+
+
+        
+//         `;
+//         filter.appendChild(divUp)
+
+//     })
+   
+    
+    
+// }
+
+//POST
+

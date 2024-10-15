@@ -6,9 +6,10 @@ const Gold = document.querySelector("#Zargarlik");
 const Texnico = document.querySelector("#Texnika");
 let sonlar = document.querySelector(".sonlar");
 let savat = document.querySelector(".savat");
-
 let count = 0;
 let product = [];
+
+
 
 
 fetch("https://fakestoreapi.com/products")
@@ -19,35 +20,46 @@ fetch("https://fakestoreapi.com/products")
     console.error("Xatolik bo'ldi tekshirib ko'ring:", error);
   });
 
+let DivBtn = document.querySelector(".Btn");
+
+// DivBtn.addEventListener('click',(product)=>{
+//   if(product.target.contains('Mens')){
+//     const Erkak = product.filter((product)=>product.category === "men's clothing")
+    
+//     Ekranga(Erkak);
+//   }
+// })
+
 Mens.addEventListener("click", () => {
 
-  const Erkak = product.filter(
-    (product) => product.category === "men's clothing");
-    Ekranga(Erkak); 
+  const Erkak = product.filter( (product) => product.category === "men's clothing");
+
+  Ekranga(Erkak); 
 });
 
-Womens.addEventListener('click',()=>{
+Womens.addEventListener('click',() => {
 
-  const women = product.filter(
-    (product) => product.category === "women's clothing");    
-    Ekranga(women)
+  const women = product.filter((product) => product.category === "women's clothing");   
+
+  Ekranga(women)
 })
 
-Gold.addEventListener('click', ()=>{
+Gold.addEventListener('click', () => {
 
   const gold = product.filter((product) => product.category === "jewelery");
+
   Ekranga(gold);
 })
 
-Texnico.addEventListener('click',()=>{
+Texnico.addEventListener('click',() => {
 
-  const tex = product.filter((product) => product.category === 'electronics');
+  const texnico = product.filter((product) => product.category === 'electronics');
 
-  Ekranga(tex)
+  Ekranga(texnico)
 
 })
 
-All.addEventListener('click',()=>{
+All.addEventListener('click',() => {
 
   const all = product.filter((product)=> product)
 
@@ -80,6 +92,7 @@ function Ekranga(product) {
   
 
 card.addEventListener("click", (e) => {
+
   if(e.target.classList.contains('savat')){
 
     count++;

@@ -1,0 +1,32 @@
+POST - orqali biz yangi bitta obyekt 'Post' yaratish mumkin.
+Agar yangi post yaratmoqchi bolsak misol uchun shu tartibda qoshsek boladi
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+    method:'POST',-----                                   //post metodi
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+        UserId:1,
+        title:'j-t Nazaryasi',
+        body:"nimadir",
+
+    })
+
+});
+.then((data)=>console.log(data)),
+.catch((data)=>console.log(data))
+
+
+PUT - orqali biz API dagi malumotlarni ozgartira olamiz va uni "PUT" orqali bajaramiz shu misol kabi 
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+    method:'PUT',-----                                   //PUT metodi
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+        UserId:1,
+        title:'j-t Nazaryasi',  //Malum bir Id dagi malumot ozgaradi
+        body:"nimadir",
+
+    })
+
+
+DELETE - Serverda mavjud resursni o'chirish uchun ishlatiladi. Masalan, foydalanuvchi hisobini yoki maqolani o'chirishda.
