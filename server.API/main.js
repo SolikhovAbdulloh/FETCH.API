@@ -36,21 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
       cards.appendChild(card);
     });
   }
-  
-    tel.addEventListener("click", () => {
+
+  tel.addEventListener("click", () => {
     let result = filters(products, "Telefon");
+    clear();
     renderCards(result);
   });
 
-      uy.addEventListener("click", () => {
-        let result = filters(products, "uy-jihozlari");
-        renderCards(result);
-      });
+  uy.addEventListener("click", () => {
+    let result = filters(products, "uy-jihozlari");
+    clear();
+    renderCards(result);
+  });
 
-       kampyuter.addEventListener("click", () => {
-         let result = filters(products, "Noutbook");
-         renderCards(result);
-       });
+  kampyuter.addEventListener("click", () => {
+    let result = filters(products, "Noutbook");
+    clear();
+    renderCards(result);
+  });
 
   function filters(products, category) {
     return products.filter((p) => p.category === category);
@@ -61,7 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
     localStorage.setItem("cart", JSON.stringify(cart));
   }
-
+  function clear() {
+    cards.innerHTML = "";
+  }
   cart.length = 0;
   function updateCartCount() {
     Icon.textContent = cart.length;
@@ -79,10 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCartCount();
 });
-
-// Kampyuter.addEventListener("click", (products) => {
-//   ADDpost(filter(products, "Noutbook"));
-// });
 
 // });
 // console.log(Telefon);
