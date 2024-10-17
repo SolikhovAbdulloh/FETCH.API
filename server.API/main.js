@@ -1,102 +1,67 @@
-const Telefon = document.querySelector("#telefonlar");
-const Kampyuter = document.querySelector("#noutbook");
-const cards = document.querySelector(".cards");
-const btn = document.querySelector("#Bos");
-const APIBtn = document.querySelector("#API");
-const APIBtn1 = document.querySelector("#API1");
-const APIBtn2 = document.querySelector("#API2");
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelector(".cards");
+  const Icon = document.querySelector(".nol"); // Savat soni
+  const Button = document.getElementById("view-cart");
+  const Items = document.querySelector(".cart-items ul"); // Savatdagi mahsulotlar ro'yxati
+  const Section = document.querySelector(".cart-items");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let API = "http://localhost:3000/Maxsulotlar";
-fetch(API)
-  .then((data) => data.json())
-  .then((data) => Addproduct(data));
+  // Mahsulotlarni yuklash
+  fetch("http://localhost:3000/Maxsulotlar")
+    .then((response) => response.json())
+    .then((products) => renderCards(products))
+    .catch((error) => console.error("Mahsulotlarni yuklashda xatolik:", error));
 
-function Addproduct(data) {
-  data.forEach((tovar) => {
-    // console.log(tovar);
-    let card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML += `
-       <div class="card">
-      
-            <img src="${tovar.img}" alt="asd">
-            <h3>${tovar.title}</h3>
-            <p>${tovar.price} so'm</p>
-            <div class = "btnn"> 
-            <button id = "Bos">Add</button>
-           </div>
-             
-        </div>`;
-    cards.append(card);
+  // Mahsulotlarni sahifaga chiqarish
+  function renderCards(products) {
+    products.forEach((product) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <img src="${product.img}" alt="Mahsulot rasmi">
+        <h3>${product.title}</h3>
+        <p>${product.price} so'm</p>
+        <button class="add-to-cart" data-id="${product.id}">Savatga qo'shish</button>
+      `;
+      // Savatga qo'shish tugmasi bosilganda mahsulotni savatga qo'shish
+      card
+        .querySelector(".add-to-cart")
+        .addEventListener("click", () => addToCart(product));
+      cards.appendChild(card);
+    });
+  }
+
+  // Savatga mahsulot qo'shish
+  function addToCart(product) {
+    cart.push(product);
+    updateCartCount();
+    localStorage.setItem("cart", JSON.stringify(cart)); // Savatni saqlash
+  }
+
+  // Savat sonini yangilash
+  function updateCartCount() {
+    Icon.textContent = cart.length;
+  }
+
+  // Savatdagi mahsulotlarni ko'rsatish
+  Button.addEventListener("click", () => {
+    Items.innerHTML = cart
+      .map((item) => `<li>${item.title} - ${item.price} so'm</li>`)
+      .join(""); // Savatdagi elementlarni chiqarish
+    Section.style.display = "block"; // Savatni ko'rsatish
   });
-}
 
-function ADDpost() {
-  fetch(API, {
-    method: "POST",
-    headers: { "Content-type": "application/json" },
-    body: JSON.stringify({
-      id: Date.now(),
-      img: "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      title: " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      price: 299999590,
-      category: "Telefon",
-    }),
-  }).then((data) => console.log(data));
-}
-function deleteData(id) {
-  fetch(`http://localhost:3000/Maxsulotlar/${id}`, {
-    method: "DELETE",
-  });
-}
-function EditPUT(id) {
-  fetch(`http://localhost:3000/Maxsulotlar/${id}`, {
-    method: "PUT",
-    headers: { "Content-type": "application/json" },
-    body: JSON.stringify({
-      id: Date.now(),
-      img: "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      title: " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      price: 29999959000,
-      category: "Telefon",
-    }),
-  });
-}
-
-APIBtn.addEventListener("click", () => {
-  ADDpost();
-  alert("API ga malumot qoshildi !! Brauzerga refreshdan song qoshiladi");
-});
-let count = 0;
-let savat = document.querySelector(".nol");
-APIBtn2.addEventListener("click", () => {
-  count++;
-  savat.textContent = count;
-});
-// APIBtn1.addEventListener('click',()=>{
-//     deleteData(1);
-// })
-// APIBtn2.addEventListener('click',()=>{
-//     EditPUT(2);
-// })
-//////////////////////////////////////////ishlamayapti
-const uy = document.querySelector("#uy-jihozlari");
-
-function filter(product, category){
- return product.filter((produc) => produc.category === 'category');
-}
-
-uy.addEventListener("click", (products) => {
-  ADDpost(filter(products, "uy-jihozlari"));
+  // Sahifa yuklanganida savat sonini yangilash
+  updateCartCount();
 });
 
-Telefon.addEventListener("click", (products) => {
-  ADDpost(filter(products, "Telefon"));
-});
+// Telefon.addEventListener("click", (products) => {
+//   ADDpost(filter(products, "Telefon"));
+// });
 
-Kampyuter.addEventListener("click", (products) => {
-  ADDpost(filter(products, "Noutbook"));
-});
+// Kampyuter.addEventListener("click", (products) => {
+//   ADDpost(filter(products, "Noutbook"));
+// });
 
 // });
 // console.log(Telefon);

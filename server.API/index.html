@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server.API</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -12,35 +12,36 @@
     <div class="contiener">
         <a href="#"><img src="./img/Link.png" alt="logo"></a>
         <div>
-
             <ul class="menu">
-                <li id="uy-jihozlari"><a href="#"  >Бытовая техника</a></li>
-                <li><a href="#" id="Telefon">Смартфоны</a></li>
-                <li><a href="#" id="Noutbook">Ноутбуки</a></li>
+                <li><a href="#" id="uy-jihozlari">Бытовая техника</a></li>
+                <li id="Telefonlar"><a href="#">Смартфоны</a></li>
+                <li id="Noutbook"><a href="#">Ноутбуки</a></li>
             </ul>
         </div>
         <div class="icon">
-            
-           <span><i class="fa-solid fa-cart-shopping nol">0</i></span>
-
+            <span><i class="fa-solid fa-cart-shopping"><span class="nol">0</span></i></span>
         </div>
+        <button id="view-cart">Savatni ko'rish</button>
     </div>
 </header>
+
 <section>
     <div class="contiener">
         <div class="buttons">
-            <button id="API">POST</button>    
-            <!-- <button id="API1">DELETE</button>     -->
-            <button id="API2">PUT</button>     
+            <button id="API">POST</button>
+            <button id="API2">PUT</button>
         </div>
     </div>
 </section>
-    <div class="contiener">
-    <div class="cards">
-    </div>
-    </div>
 
-<!-- <button>send post</button> -->
-    <script src="/main.js"></script>
+<div class="contiener">
+    <div class="cards"></div>
+    <div class="cart-items" style="display: none;">
+        <h2>Savatdagi mahsulotlar</h2>
+        <ul></ul>
+    </div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>

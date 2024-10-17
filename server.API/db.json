@@ -57,53 +57,36 @@
       "category": "Noutbook"
     },
     {
-      "id": "1729031731305",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
+      "id": "9570",
+      "cart": [
+        {
+          "id": "3",
+          "img": "https://assets.asaxiy.uz/product/items/desktop/556181fa381db2a351b9c45f1b6f99232024053011474289823qUXOUpP867.png",
+          "title": "Смартфон Honor 200 Lite 5G 8/256 GB Океанический голубой",
+          "price": 3439000,
+          "category": "Telefon"
+        }
+      ]
     },
     {
-      "id": "1729032768010",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
+      "id": "ae18",
+      "cart": [
+        {
+          "id": "4",
+          "img": "https://assets.asaxiy.uz/product/items/desktop/3ef815416f775098fe977004015c61932022043017462771255teDB2W47yv.jpg.webp",
+          "title": "Блендер Sonifer SF-8097",
+          "price": 419000,
+          "category": "uy-jihozlari"
+        }
+      ]
     },
     {
-      "id": "1729033209595",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
+      "id": "b778",
+      "productId": "4"
     },
     {
-      "id": "1729033211906",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
-    },
-    {
-      "id": "1729033213479",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
-    },
-    {
-      "id": "1729033214649",
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
-    },
-    {
-      "id": 1729035876964,
-      "img": "https://assets.asaxiy.uz/product/main_image/desktop//659a72a385ec0.jpeg.webp",
-      "title": " Смартфон Samsung Galaxy A15 8/256GB Blue",
-      "price": 299999590,
-      "category": "Telefon"
+      "id": "806e",
+      "productId": "3"
     }
   ]
 }

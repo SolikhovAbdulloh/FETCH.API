@@ -29,7 +29,7 @@ body {
     align-items: center;
     gap: 30px;
 }
- .menu{
+.menu{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,6 @@ body {
     text-decoration: none;
     list-style: none;
     color: blue;
-    
 }
 .menu li a:hover{
     color: chocolate;
@@ -53,7 +52,6 @@ body {
     margin: 0 auto;
     margin-bottom: 50px;
     gap: 10px;
-    
 }
 .cards img{
     width: 100%;
@@ -61,7 +59,6 @@ body {
 .card h3{
     font-size: 19px;
     font-weight: 400;
-
 }
 .card{
     font-size: 19px;
@@ -72,7 +69,6 @@ body {
     align-items: start;
     gap: 50px;
     padding: 10px;
-
 }
 #API,#API1,#API2{
     background-color: #006afffa;
@@ -82,8 +78,6 @@ body {
     color: white;
     gap: 30px;
 }
-
-
 .btnn{
     width: 300px;
     height: 20px;
@@ -94,7 +88,6 @@ body {
     color: white;
     border: none;
     margin: 0 auto;
-
 }
 .btnn{
     display: flex;
