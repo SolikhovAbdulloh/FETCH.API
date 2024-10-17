@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cart", JSON.stringify(cart)); 
   }
 
-
+  cart.length = 0
   function updateCartCount() {
     Icon.textContent = cart.length;
   }
