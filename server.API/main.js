@@ -1,17 +1,23 @@
+let products = [];
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelector(".cards");
-  const Icon = document.querySelector(".nol"); 
+  const Icon = document.querySelector(".nol");
   const Button = document.getElementById("view-cart");
   const Items = document.querySelector(".cart-items ul");
   const Section = document.querySelector(".cart-items");
+  let tel = document.querySelector("#Telefonlar");
+  const uy = document.querySelector("#uy-jihozlari");
+  const kampyuter = document.querySelector("#Noutbook");
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
   fetch("http://localhost:3000/Maxsulotlar")
-    .then((response) => response.json())
-    .then((products) => renderCards(products))
+    .then((data) => data.json())
+    .then((data) => {
+      products = [...data];
+      renderCards(products);
+      console.log(products);
+    })
     .catch((error) => console.error("Mahsulotlarni yuklashda xatolik:", error));
-
 
   function renderCards(products) {
     products.forEach((product) => {
@@ -23,40 +29,56 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>${product.price} so'm</p>
         <button class="add-to-cart" data-id="${product.id}">Savatga qo'shish</button>
       `;
-   
+
       card
         .querySelector(".add-to-cart")
         .addEventListener("click", () => addToCart(product));
       cards.appendChild(card);
     });
   }
+  
+    tel.addEventListener("click", () => {
+    let result = filters(products, "Telefon");
+    renderCards(result);
+  });
 
+      uy.addEventListener("click", () => {
+        let result = filters(products, "uy-jihozlari");
+        renderCards(result);
+      });
+
+       kampyuter.addEventListener("click", () => {
+         let result = filters(products, "Noutbook");
+         renderCards(result);
+       });
+
+  function filters(products, category) {
+    return products.filter((p) => p.category === category);
+  }
 
   function addToCart(product) {
     cart.push(product);
     updateCartCount();
-    localStorage.setItem("cart", JSON.stringify(cart)); 
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
 
-  cart.length = 0
+  cart.length = 0;
   function updateCartCount() {
     Icon.textContent = cart.length;
   }
 
   Button.addEventListener("click", () => {
     Items.innerHTML = cart
-      .map((item) => `<li>${item.title} - ${item.price} so'm</li>`)
+      .map(
+        (item) =>
+          `<img src="${item.img}" alt="Mahsulot rasmi" style = "width:30%"><li>${item.title} - ${item.price} so'm</li>`
+      )
       .join("");
-    Section.style.display = "block"; 
+    Section.style.display = "flex";
   });
 
-  
   updateCartCount();
 });
-
-// Telefon.addEventListener("click", (products) => {
-//   ADDpost(filter(products, "Telefon"));
-// });
 
 // Kampyuter.addEventListener("click", (products) => {
 //   ADDpost(filter(products, "Noutbook"));
