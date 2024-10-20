@@ -77,9 +77,9 @@ function addToCart(product) {
 }
 
 function addToLikes(product) {
-  likes.push(product); // Mahsulotni sevimlilarga qo'shish
+  likes.push(product); 
   updateLikeCount();
-  localStorage.setItem("likes", JSON.stringify(likes)); // Sevimli mahsulotlarni localStorage ga saqlash
+  localStorage.setItem("likes", JSON.stringify(likes)); 
 }
 
 function clear() {
@@ -87,16 +87,17 @@ function clear() {
 }
 
 cart.length = 0;
-
+likes.length = 0;
 function updateCartCount() {
   Icon.textContent = cart.length;
 }
 
 function updateLikeCount() {
-  count_like.textContent = likes.length; // Yurak belgisidagi sonni yangilash
+  count_like.textContent = likes.length; 
 }
 
 Button.addEventListener("click", () => {
+  
   Items.innerHTML = cart
     .map(
       (item) =>
@@ -114,7 +115,7 @@ yurak.addEventListener("click", () => {
         `<img src="${item.img}" alt="Mahsulot rasmi" style="width:100%"><li>${item.title} - ${item.price} so'm</li>`
     )
     .join("");
-  Section2.style.display = "flex"; // Sevimli mahsulotlar ko'rinishini ochish
+  Section2.style.display = "flex"; 
   clear();
 });
 
