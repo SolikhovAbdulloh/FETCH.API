@@ -44,6 +44,21 @@ body {
 .menu li a{
     text-decoration: none;
 }
+.like{
+    cursor: pointer;
+    color: rgb(28, 8, 8);
+    
+    
+}
+.like:hover{
+    transform: scaleX(1);
+    color: red;
+
+}
+.fa-solid:hover{
+    cursor: pointer;
+    color: red;
+}
 .cards{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -104,4 +119,32 @@ body {
 }
 button:hover{
     background-color: #006afffa;
+}
+#view-cart{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#view-cart:hover{
+    background-color: rgb(10, 10, 71);
+    box-shadow: 2px 2px black;
+}
+#yurak{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#yurak:hover{
+    background-color: rgb(10, 10, 71);
+    box-shadow: 2px 2px black;
 }

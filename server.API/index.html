@@ -19,20 +19,28 @@
             </ul>
         </div>
         <div class="icon">
-            <span><i class="fa-solid fa-cart-shopping"><span class="nol">0</span></i></span>
+            <i class="fa-solid fa-cart-shopping"><span class="nol">0</span></i>
+            <i class="fa-solid fa-heart"><span class="like">0</span></i>
         </div>
-        <button id="view-cart">Savatni ko'rish</button>
+        <div>
+
+            <button id="view-cart">Savatni ko'rish</button>
+            <button id = "yurak">Likes product</button>
+        </div>
     </div>
 </header>
 
-<section>
+<!-- <section>
     <div class="contiener">
         <div class="buttons">
             <button id="API">POST</button>
             <button id="API2">PUT</button>
         </div>
     </div>
-</section>
+</section> -->
+
+
+
 
 <div class="contiener">
     <div class="cards"></div>
@@ -40,7 +48,16 @@
         <h2>Savatdagi mahsulotlar</h2>
         <ul></ul>
     </div>
+
+
+    <div class="cart-likes" style ="display: none;">
+        <h2>Yoqtirgan mahsulotlaringiz</h2>
+        <ul></ul>
+    </div>
+
 </div>
+
+
 
 <script src="main.js"></script>
 </body>
